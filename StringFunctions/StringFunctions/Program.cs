@@ -32,7 +32,7 @@ namespace StringFunctions
             //sb.Append("My name is Forest");
 
 
-            ////////Cloncatenate 3 Strings:
+            ////////Concatenate 3 Strings:
             string name = "Forest";
             string job = "Software developer";
             int age = 27;
