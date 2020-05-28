@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
-
+using System.Globalization;
 
 class Program
 {
@@ -33,30 +32,30 @@ class Program
 
 
         //**********One dimensional array of strings**********//
-        //string[] strArray = { "Forest", "Abii", "Taylor", "Keely", "Sasha", "Tom", "Natty" };
+        string[] strArray = { "Forest", "Abii", "Taylor", "Keely", "Sasha", "Tom", "Natty" };
 
-        //Console.WriteLine("Pick a number:");
-        //int num = Convert.ToInt32(Console.ReadLine());
-        //while (num > 6 || num < 0)
-        //{
-        //    Console.WriteLine("Please pick a number between 0 and 6");
-        //    num = Convert.ToInt32(Console.ReadLine());
-        //}
-        //Console.WriteLine("You picked: " + num + ", with an array value of: " + strArray[num]);
-        //Console.ReadLine();
+        Console.WriteLine("Pick a number:");
+        int num = Convert.ToInt32(Console.ReadLine());
+        while (num > 6 || num < 0)
+        {
+            Console.WriteLine("Please pick a number between 0 and 6");
+            num = Convert.ToInt32(Console.ReadLine());
+        }
+        Console.WriteLine("You picked: " + num + ", with an array value of: " + strArray[num]);
+        Console.ReadLine();
 
-        ////**********One dimensional array of integers**********//
-        //int[] intArray = { 5, 10, 15, 33, 53, 1234, 4231, 234643, };
+        //**********One dimensional array of integers**********//
+        int[] intArray = { 5, 10, 15, 33, 53, 1234, 4231, 234643, };
 
-        //Console.WriteLine("Pick another number:");
-        //int num2 = Convert.ToInt32(Console.ReadLine());
-        //while (num2 > 7 || num2 < 0)
-        //{
-        //    Console.WriteLine("Please pick a number between 0 and 7");
-        //    num2 = Convert.ToInt32(Console.ReadLine());
-        //}
-        //Console.WriteLine("You picked: " + num2 + ", with an array value of: " + intArray[num2]);
-        //Console.ReadLine();
+        Console.WriteLine("Pick another number:");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+        while (num2 > 7 || num2 < 0)
+        {
+            Console.WriteLine("Please pick a number between 0 and 7");
+            num2 = Convert.ToInt32(Console.ReadLine());
+        }
+        Console.WriteLine("You picked: " + num2 + ", with an array value of: " + intArray[num2]);
+        Console.ReadLine();
 
         //**********List of strings**********//
 
@@ -68,18 +67,22 @@ class Program
         strList.Add("Kirby");
         strList.Add("Marth");
 
+        // player one will choose a character
         Console.WriteLine("Player One: Select a number between 0 and 4 to pick your character:");
         int character = Convert.ToInt32(Console.ReadLine());
-     
+
+        //if they pick a number outside of the list length, they pick again
         while (character > 4 || character < 0) 
         {
             Console.WriteLine("Please pick a number between 0 and 4");
             character = Convert.ToInt32(Console.ReadLine());
         }
 
+        //player two picks a character
         Console.WriteLine("Player Two: Select a number between 0 and 4 to pick your character:");
         int character2 = Convert.ToInt32(Console.ReadLine());
 
+        //if they pick a number outside of the list length, or the pick the same number, they pick again
         while (character2 > 4 || character2 < 0 || character2 == character)
         {
             if (character2 == character)
@@ -95,8 +98,6 @@ class Program
             }
             
         }
-
-      
 
         Console.WriteLine("Player one chose " + strList[character] + "!");
         Console.WriteLine("Player two chose " + strList[character2] + "!.....\n FIGHT!");
