@@ -29,7 +29,7 @@ namespace MethodOverloading
             Console.WriteLine("The total including tip is " + total);
             Console.ReadLine();
 
-            //method takes in three strings 
+            //method takes in two strings 
             Console.WriteLine("Enter in the cost of the meal:");
             string costThree = Console.ReadLine();
             Console.WriteLine("Enter in the number of people in your party:");
