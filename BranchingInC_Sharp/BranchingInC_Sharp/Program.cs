@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -71,29 +72,33 @@ namespace BranchingInC_Sharp
             if (pkgWeight > 50)
             {
                 Console.WriteLine("Package too heavy to be shipped via Package Express. Have a good day.");
+                Console.ReadLine();
             }
-
-            Console.WriteLine("How wide is your package?");
-            int pkgWidth = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("How tall is your package?");
-            int pkgHeight = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("What is the length of your package?");
-            int pkgLength = Convert.ToInt32(Console.ReadLine());
-
-            if (pkgWidth + pkgLength + pkgHeight > 50)
+            else
             {
-                Console.WriteLine("Package too big to be shipped via Package Express. Have a good day.");
+                Console.WriteLine("How wide is your package?");
+                int pkgWidth = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("How tall is your package?");
+                int pkgHeight = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("What is the length of your package?");
+                int pkgLength = Convert.ToInt32(Console.ReadLine());
+
+                if (pkgWidth + pkgLength + pkgHeight > 50)
+                {
+                    Console.WriteLine("Package too big to be shipped via Package Express. Have a good day.");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    int quote = (pkgWeight * (pkgHeight * pkgLength * pkgWidth)) / 100;
+
+                    Console.WriteLine("Your package will cost $" + quote + ".00 to ship.");
+                    Console.WriteLine("Thank you!");
+                    Console.ReadLine();
+                }
             }
-
-            int quote = (pkgWeight * (pkgHeight * pkgLength * pkgWidth)) / 100;
-
-            Console.WriteLine("Your package will cost $" + quote + ".00 to ship.");
-            Console.WriteLine("Thank you!");
-            Console.ReadLine();
-            
-
         }
     }
 }
