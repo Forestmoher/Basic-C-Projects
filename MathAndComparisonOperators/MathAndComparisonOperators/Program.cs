@@ -39,39 +39,35 @@ namespace MathAndComparisonOperators
             //Console.WriteLine(isWarm);
             //Console.ReadLine();
 
-            Console.WriteLine("Please enter a number:");
-            string numOneStr = Console.ReadLine();
-            int numOne = Convert.ToInt32(numOneStr);
+            Console.WriteLine("Please enter a number:");           
+            int numOne = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(numOneStr + " times 50 equals: " + numOne * 50);
+            Console.WriteLine(numOne + " times 50 equals: " + numOne * 50);
             Console.ReadLine();
 
             Console.WriteLine("Please enter another number:");
-            string numTwoStr = Console.ReadLine();
-            int numTwo = Convert.ToInt32(numTwoStr);
+            int numTwo = Convert.ToInt32(Console.ReadLine());
+            int sum = numTwo + 25;
 
-            Console.WriteLine(numTwoStr + " plus 25 equals: " + numTwo + 25);
+            Console.WriteLine(numTwo + " plus 25 equals: " + sum);
             Console.ReadLine();
 
             Console.WriteLine("Please enter another number:");
-            string numThreeStr = Console.ReadLine();
-            int numThree = Convert.ToInt32(numThreeStr);
+            int numThree = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(numThreeStr + " divided by 12.5 equals: " + numThree / 12.5);
+            Console.WriteLine(numThree + " divided by 12.5 equals: " + numThree / 12.5);
             Console.ReadLine();
 
             Console.WriteLine("Please enter another number:");
-            string numFourStr = Console.ReadLine();
-            int numFour = Convert.ToInt32(numFourStr);
+            int numFour = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Is " + numFourStr + " greater than 50?: " + (numFour > 50));
+            Console.WriteLine("Is " + numFour + " greater than 50?: " + (numFour > 50));
             Console.ReadLine();
 
             Console.WriteLine("Please enter another number:");
-            string numFiveStr = Console.ReadLine();
-            int numFive = Convert.ToInt32(numFiveStr);
+            int numFive = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("The remainder of " + numFiveStr + " divided by 7 is: " + numFive % 7);
+            Console.WriteLine("The remainder of " + numFive + " divided by 7 is: " + numFive % 7);
             Console.ReadLine();
         }
     }
