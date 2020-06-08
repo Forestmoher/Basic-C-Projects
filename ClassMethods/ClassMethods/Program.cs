@@ -36,7 +36,7 @@ namespace ClassMethods
             int numSix = Convert.ToInt32(Console.ReadLine());
             example.multiply(numFour, numFive, numSix);
 
-            //static class method'
+            //static class method 
             Console.WriteLine("Please enter a number:");
             int numSeven = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please enter a number:");
