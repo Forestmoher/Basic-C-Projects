@@ -22,7 +22,7 @@ namespace OperatorOverloading
                 LastName = "Elam",
                 ID = 002
             };
-            string outcome = Tom == Forest;
+            bool outcome = Tom == Forest;
             Console.WriteLine(outcome);
             Console.ReadLine();
 

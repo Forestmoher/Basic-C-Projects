@@ -10,29 +10,29 @@ namespace OperatorOverloading
     {
         public int ID { get; set; }
 
-        public static string operator ==(Employee employeeOne, Employee employeeTwo)
+        public static bool operator ==(Employee employeeOne, Employee employeeTwo)
         {
-            string outcome;
+            bool outcome;
             if (employeeOne.ID == employeeTwo.ID)
             {
-                outcome = "**Employees have same employee ID";               
+                outcome = true;               
             }
             else
             {
-                outcome = "**Employees have unique employee IDs";
+                outcome = false;
             }
             return outcome;
         }
-        public static string operator !=(Employee employeeOne, Employee employeeTwo)
+        public static bool operator !=(Employee employeeOne, Employee employeeTwo)
         {
-            string outcome;
+            bool outcome;
             if (employeeOne.ID != employeeTwo.ID)
             {
-                outcome = "**Employees have unique employee IDs";
+                outcome = true;
             }
             else
             {
-                outcome = "**Employees have same employee ID";
+                outcome = false;
             }
             return outcome;
         }
