@@ -50,6 +50,7 @@ namespace LAMBDA
                 Console.WriteLine(joe.FirstName + " " + joe.LastName);
             }
 
+            //this list id for employees with ID greater than 5
             List<Employee> greaterThanFive = employees.Where(x => x.ID > 005).ToList();
             foreach (Employee greater in greaterThanFive)
             {
